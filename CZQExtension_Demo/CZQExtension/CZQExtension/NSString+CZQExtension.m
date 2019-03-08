@@ -299,4 +299,77 @@
     return mutStr;
 }
 
+/**
+ *  json字符串转字典
+ */
+- (NSDictionary *)czq_jsonStringToDictionary {
+    if (self == nil) {
+        return nil;
+    }
+    NSData *jsonData = [self dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *err;
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                        options:NSJSONReadingMutableContainers
+                                                          error:&err];
+    if(err) {
+        NSLog(@"json解析失败：%@",err);
+        return nil;
+    }
+    return dic;
+}
+
+#pragma mark - 半角长度
+/**
+ *  按半角规则获取字符串长度
+ */
+- (NSInteger)czq_halfWidthLength {
+    NSUInteger asciiLength = 0;
+    for (NSUInteger i = 0; i < self.length; i++) {
+        unichar uc = [self characterAtIndex: i];
+        asciiLength += isascii(uc) ? 1 : 2;
+    }
+    NSUInteger unicodeLength = asciiLength;
+    return unicodeLength;
+}
+
+#pragma mark - 格式化数据库表名
+/**
+ *  格式化数据库表名
+ *  将字符串转成大写
+ *  使用网络参数拼接数据库表名时,处理表名中特殊符号
+ *  @return 格式化后的字符串
+ */
+- (NSString *)czq_stringToSqlTableName {
+    NSString *str = [self uppercaseString];
+    str = [str stringByReplacingOccurrencesOfString:@"-" withString:@"_"];
+    str = [str stringByReplacingOccurrencesOfString:@"?" withString:@"_"];
+    return str;
+}
+
+#pragma mark - 判断付款码平台
+/**
+ *  判断付款码平台
+ *  @return 付款码平台
+ */
+- (CZQOnlinePaymentType)determineOnlinePaymentTypes {
+    if (!self.length) {
+        //没有付款码
+        return CZQOnlinePaymentTypeNo;
+    }
+    if ((self.length >= 16 && self.length <= 24) && ([self hasPrefix:@"25"] || [self hasPrefix:@"26"] || [self hasPrefix:@"27"] || [self hasPrefix:@"28"] || [self hasPrefix:@"29"] || [self hasPrefix:@"30"])) {
+        //支付宝
+        return CZQOnlinePaymentTypeAli;
+    }
+    if ((self.length == 18) && ([self hasPrefix:@"10"] || [self hasPrefix:@"11"] || [self hasPrefix:@"12"] || [self hasPrefix:@"13"] || [self hasPrefix:@"14"] || [self hasPrefix:@"15"])) {
+        //微信
+        return CZQOnlinePaymentTypeWechat;
+    }
+    if ((self.length == 18) && [self hasPrefix:@"21"]) {
+        //京东
+        return CZQOnlinePaymentTypeJd;
+    }
+    //未知类型
+    return CZQOnlinePaymentTypeUnknow;
+}
+
 @end

@@ -9,6 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger,CZQOnlinePaymentType) {
+    CZQOnlinePaymentTypeUnknow = -2,//未知支付类型
+    CZQOnlinePaymentTypeNo = -1,//没有线上支付
+    CZQOnlinePaymentTypeAli = 0,//支付宝
+    CZQOnlinePaymentTypeWechat,//微信
+    CZQOnlinePaymentTypeJd//京东支付
+};
 
 @interface NSString (CZQExtension)
 
@@ -118,7 +125,7 @@
  *  @param  font : 该字符串所用的字体(字体大小不一样,显示出来的面积也不同)
  *  @param  maxSize : 为限制改字体的最大宽和高(如果显示一行,则宽高都设置为MAXFLOAT, 如果显示为多行,只需将宽设置一个有限定长值,高设置为MAXFLOAT)
  */
--(CGSize)czq_sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize;
+- (CGSize)czq_sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize;
 
 #pragma mark - 16进制字符串
 /**
@@ -146,14 +153,20 @@
 + (NSString *)czq_encodeBase64WithData:(NSData *)data;
 
 #pragma mark - 字符串拼接
+/**
+ *  追加字符串
+ *  @param  string  追加的字符串
+ *  @return 拼接后的字符串
+ */
 - (NSString *)czq_appendString:(NSString *)string;
 
 #pragma mark - 富文本
 /**
  *  转换富文本
- *  font    字体
- *  color   颜色
- *  range   范围
+ *  @param  font    字体
+ *  @param  color   颜色
+ *  @param  range   范围
+ *  @return 富文本
  */
 - (NSAttributedString *)czq_stringToAttributedStringWithFont:(UIFont *)font color:(UIColor *)color range:(NSRange)range;
 
@@ -165,11 +178,34 @@
  */
 + (NSString *)czq_jsonStringWithDictionary:(NSDictionary *)dict;
 
+/**
+ *  json字符串转字典
+ *  @return 字典
+ */
+- (NSDictionary *)czq_jsonStringToDictionary;
+
 #pragma mark - 半角长度
 /**
- *  按半角规则获取字符串长度
+ *  按半角规则获取字符串长度 英文占一个长度  中文占两个长度
+ *  @return 长度
  */
 - (NSInteger)czq_halfWidthLength;
+
+#pragma mark - 格式化数据库表名
+/**
+ *  格式化数据库表名
+ *  将字符串转成大写
+ *  使用网络参数拼接数据库表名时,处理表名中特殊符号
+ *  @return 格式化后的字符串
+ */
+- (NSString *)czq_stringToSqlTableName;
+
+#pragma mark - 判断付款码平台
+/**
+ *  判断付款码平台
+ *  @return 付款码平台
+ */
+- (CZQOnlinePaymentType)determineOnlinePaymentTypes;
 
 @end
 
