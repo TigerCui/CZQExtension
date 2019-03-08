@@ -139,6 +139,19 @@
     return newNumber;
 }
 
+/**
+ *  小数最后一位向上取整
+ *  @param scale 小数点后保留的位数
+ *  2.35->2.4   2.32->2.4
+ */
++ (NSDecimalNumber *)czq_decimalNumber:(id)decimalNumber roundUpWithScale:(short)scale {
+    NSDecimalNumber *oldNumber = [NSDecimalNumber formatParam:decimalNumber];
+    NSDecimalNumberHandler *handler = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundUp scale:scale raiseOnExactness:NO raiseOnOverflow:NO raiseOnUnderflow:NO raiseOnDivideByZero:YES];
+    NSDecimalNumber *num = [NSDecimalNumber zero];
+    NSDecimalNumber *newNumber = [oldNumber decimalNumberByAdding:num withBehavior:handler];
+    return newNumber;
+}
+
 #pragma mark - 正负值转换
 /**
  *  将数字转换为正数

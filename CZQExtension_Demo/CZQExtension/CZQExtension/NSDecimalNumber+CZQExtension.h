@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
 
 @interface NSDecimalNumber (CZQExtension)
 
@@ -62,16 +61,25 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - 小数点控制
 /**
- *  小数最后一位舍去
- *  scale   要保留的小数位数
+ *  小数最后一位向下取整
+ *  @param scale  小数点后保留的位数
+ *  2.35->2.3   2.32->2.3
  */
 + (NSDecimalNumber *)czq_decimalNumber:(id)decimalNumber roundDownWithScale:(short)scale;
 
 /**
  *  小数最后一位四舍五入
- *  scale   要保留的小数位数
+ *  @param scale 小数点后保留的位数
+ *  2.35->2.4   2.32->2.3
  */
 + (NSDecimalNumber *)czq_decimalNumber:(id)decimalNumber roundPlainWithScale:(short)scale;
+
+/**
+ *  小数最后一位向上取整
+ *  @param scale 小数点后保留的位数
+ *  2.35->2.4   2.32->2.4
+ */
++ (NSDecimalNumber *)czq_decimalNumber:(id)decimalNumber roundUpWithScale:(short)scale;
 
 #pragma mark - 正负值转换
 /**
@@ -86,4 +94,3 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-NS_ASSUME_NONNULL_END
