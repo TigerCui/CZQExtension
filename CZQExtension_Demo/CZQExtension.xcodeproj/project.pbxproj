@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		011374942232449800C8D624 /* UIView+CZQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 011374932232449800C8D624 /* UIView+CZQExtension.m */; };
 		011625B3218FF14C00A3E388 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 011625B2218FF14C00A3E388 /* AppDelegate.m */; };
 		011625B6218FF14C00A3E388 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011625B5218FF14C00A3E388 /* ViewController.m */; };
 		011625B9218FF14C00A3E388 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011625B7218FF14C00A3E388 /* Main.storyboard */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		011374922232449800C8D624 /* UIView+CZQExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CZQExtension.h"; sourceTree = "<group>"; };
+		011374932232449800C8D624 /* UIView+CZQExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CZQExtension.m"; sourceTree = "<group>"; };
 		011625AE218FF14C00A3E388 /* CZQExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CZQExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		011625B1218FF14C00A3E388 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		011625B2218FF14C00A3E388 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 				011625E5218FF1DB00A3E388 /* NSDecimalNumber+CZQExtension.m */,
 				011625E7218FF2AB00A3E388 /* NSString+CZQExtension.h */,
 				011625E8218FF2AB00A3E388 /* NSString+CZQExtension.m */,
+				011374922232449800C8D624 /* UIView+CZQExtension.h */,
+				011374932232449800C8D624 /* UIView+CZQExtension.m */,
 			);
 			path = CZQExtension;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 				011625C1218FF14F00A3E388 /* main.m in Sources */,
 				011625E9218FF2AB00A3E388 /* NSString+CZQExtension.m in Sources */,
 				011625B3218FF14C00A3E388 /* AppDelegate.m in Sources */,
+				011374942232449800C8D624 /* UIView+CZQExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
