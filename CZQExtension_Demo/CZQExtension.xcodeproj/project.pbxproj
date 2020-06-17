@@ -38,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0103B6AC249A210400F2771B /* CZQExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZQExtension.h; sourceTree = "<group>"; };
 		011374922232449800C8D624 /* UIView+CZQExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CZQExtension.h"; sourceTree = "<group>"; };
 		011374932232449800C8D624 /* UIView+CZQExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CZQExtension.m"; sourceTree = "<group>"; };
 		011625AE218FF14C00A3E388 /* CZQExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CZQExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +152,7 @@
 				011625E8218FF2AB00A3E388 /* NSString+CZQExtension.m */,
 				011374922232449800C8D624 /* UIView+CZQExtension.h */,
 				011374932232449800C8D624 /* UIView+CZQExtension.m */,
+				0103B6AC249A210400F2771B /* CZQExtension.h */,
 			);
 			path = CZQExtension;
 			sourceTree = "<group>";
