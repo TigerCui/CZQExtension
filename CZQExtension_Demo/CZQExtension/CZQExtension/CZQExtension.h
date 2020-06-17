@@ -12,5 +12,6 @@
 #import "NSDecimalNumber+CZQExtension.h"
 #import "NSString+CZQExtension.h"
 #import "UIView+CZQExtension.h"
+#import "UILabel+CZQExtension.h"
 
 #endif /* CZQExtension_h */
