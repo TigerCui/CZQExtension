@@ -12,36 +12,24 @@
 @implementation NSDecimalNumber (CZQExtension)
 
 #pragma mark - 四则运算(+,-,*,/)
-/**
- *  计算decimalNumber + otherDecimailNumber
- */
 + (NSDecimalNumber *)czq_decimalNumber:(id)decimalNumber sumDecimalNumber:(id)otherDecimailNumber {
     NSDecimalNumber *number = [NSDecimalNumber formatParam:decimalNumber];
     NSDecimalNumber *otherNumber = [NSDecimalNumber formatParam:otherDecimailNumber];
     return [otherNumber decimalNumberByAdding:number];
 }
 
-/**
- *  计算decimalNumber - otherDecimalNumber
- */
 + (NSDecimalNumber *)czq_decimalNumber:(id)decimalNumber subtractDecimalNumber:(id)otherDecimalNumber; {
     NSDecimalNumber *number = [NSDecimalNumber formatParam:decimalNumber];
     NSDecimalNumber *otherNumber = [NSDecimalNumber formatParam:otherDecimalNumber];
     return [number decimalNumberBySubtracting:otherNumber];
 }
 
-/**
- *  计算decimalNumber * otherDecimalNumber
- */
 + (NSDecimalNumber *)czq_decimalNumber:(id)decimalNumber multiplyDecimalNumber:(id)otherDecimalNumber; {
     NSDecimalNumber *number = [NSDecimalNumber formatParam:decimalNumber];
     NSDecimalNumber *otherNumber = [NSDecimalNumber formatParam:otherDecimalNumber];
     return [number decimalNumberByMultiplyingBy:otherNumber];
 }
 
-/**
- *  计算decimalNumber / otherDecimalNumber
- */
 + (NSDecimalNumber *)czq_decimalNumber:(id)decimalNumber divideDecimalNumber:(id)otherDecimalNumber; {
     NSDecimalNumber *number = [NSDecimalNumber formatParam:decimalNumber];
     NSDecimalNumber *otherNumber = [NSDecimalNumber formatParam:otherDecimalNumber];
@@ -53,10 +41,6 @@
 }
 
 #pragma mark - 判断大小
-/**
- *  判断decimalNumber是否等于otherDecimalNumber
- *  @return YES相等   NO不等
- */
 + (BOOL)czq_decimalNumber:(id)decimalNumber isEqualToDecimalNumber:(id)otherDecimalNumber {
     NSDecimalNumber *number = [NSDecimalNumber formatParam:decimalNumber];
     NSDecimalNumber *otherNumber = [NSDecimalNumber formatParam:otherDecimalNumber];
@@ -67,10 +51,6 @@
     }
 }
 
-/**
- *  判断decimalNumber是否大于otherDecimalNumber
- *  @return YES大于   NO不大于
- */
 + (BOOL)czq_decimalNumber:(id)decimalNumber isGreaterThanDecimalNumber:(id)otherDecimalNumber {
     NSDecimalNumber *number = [NSDecimalNumber formatParam:decimalNumber];
     NSDecimalNumber *otherNumber = [NSDecimalNumber formatParam:otherDecimalNumber];
@@ -81,10 +61,6 @@
     }
 }
 
-/**
- *  判断decimalNumber是否小于otherDecimalNumber
- *  @return YES小于   NO不小于
- */
 + (BOOL)czq_decimalNumber:(id)decimalNumber isLessThanDecimalNumber:(id)otherDecimalNumber {
     NSDecimalNumber *number = [NSDecimalNumber formatParam:decimalNumber];
     NSDecimalNumber *otherNumber = [NSDecimalNumber formatParam:otherDecimalNumber];
@@ -95,12 +71,6 @@
     }
 }
 
-/**
- *  判断大小
- *  NSOrderedSame           相等
- *  NSOrderedDescending     decimalNumber大于otherDecimalNumber
- *  NSOrderedAscending      decimalNumber小于otherDecimalNumber
- */
 + (NSComparisonResult)czq_decimalNumber:(id)decimalNumber compareWithDecimalNumber:(id)otherDecimalNumber {
     if ([NSDecimalNumber czq_decimalNumber:decimalNumber isEqualToDecimalNumber:otherDecimalNumber]) {
         return NSOrderedSame;//等于
@@ -115,10 +85,6 @@
 }
 
 #pragma mark - 小数点控制
-/**
- *  小数最后一位舍去
- *  scale   要保留的小数位数
- */
 + (NSDecimalNumber *)czq_decimalNumber:(id)decimalNumber roundDownWithScale:(short)scale {
     NSDecimalNumber *oldNumber = [NSDecimalNumber formatParam:decimalNumber];
     NSDecimalNumberHandler *handler = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundDown scale:scale raiseOnExactness:NO raiseOnOverflow:NO raiseOnUnderflow:NO raiseOnDivideByZero:YES];
@@ -127,10 +93,6 @@
     return newNumber;
 }
 
-/**
- *  小数最后一位四舍五入
- *  scale   要保留的小数位数
- */
 + (NSDecimalNumber *)czq_decimalNumber:(id)decimalNumber roundPlainWithScale:(short)scale {
     NSDecimalNumber *oldNumber = [NSDecimalNumber formatParam:decimalNumber];
     NSDecimalNumberHandler *handler = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundPlain scale:scale raiseOnExactness:NO raiseOnOverflow:NO raiseOnUnderflow:NO raiseOnDivideByZero:YES];
@@ -139,11 +101,6 @@
     return newNumber;
 }
 
-/**
- *  小数最后一位向上取整
- *  @param scale 小数点后保留的位数
- *  2.35->2.4   2.32->2.4
- */
 + (NSDecimalNumber *)czq_decimalNumber:(id)decimalNumber roundUpWithScale:(short)scale {
     NSDecimalNumber *oldNumber = [NSDecimalNumber formatParam:decimalNumber];
     NSDecimalNumberHandler *handler = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundUp scale:scale raiseOnExactness:NO raiseOnOverflow:NO raiseOnUnderflow:NO raiseOnDivideByZero:YES];
@@ -153,9 +110,6 @@
 }
 
 #pragma mark - 正负值转换
-/**
- *  将数字转换为正数
- */
 + (NSDecimalNumber *)czq_decimalNumberToPositiveNumber:(id)decimalNumber {
     NSDecimalNumber *n = [NSDecimalNumber formatParam:decimalNumber];
     if ([NSDecimalNumber czq_decimalNumber:n isLessThanDecimalNumber:@"0"]) {
@@ -164,9 +118,6 @@
     return n;
 }
 
-/**
- *  将数字转为负数
- */
 + (NSDecimalNumber *)czq_decimalNumberToNegativeNumber:(id)decimalNumber {
     NSDecimalNumber *n = [NSDecimalNumber formatParam:decimalNumber];
     if ([NSDecimalNumber czq_decimalNumber:n isGreaterThanDecimalNumber:@"0"]) {
