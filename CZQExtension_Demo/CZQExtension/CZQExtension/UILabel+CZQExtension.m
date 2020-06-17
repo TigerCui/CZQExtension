@@ -12,8 +12,8 @@
 
 + (UILabel *)czq_labelWithFont:(UIFont *)font textColor:(UIColor *)textColor {
     UILabel *l = [UILabel new];
-    l.font = font;
-    l.textColor = textColor;
+    font?(l.font = font):nil;
+    textColor?(l.textColor = textColor):nil;
     return l;
 }
 
