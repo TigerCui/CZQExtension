@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0105CA24249A594C005933B3 /* UILabel+CZQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0105CA23249A594C005933B3 /* UILabel+CZQExtension.m */; };
 		011374942232449800C8D624 /* UIView+CZQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 011374932232449800C8D624 /* UIView+CZQExtension.m */; };
 		011625B3218FF14C00A3E388 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 011625B2218FF14C00A3E388 /* AppDelegate.m */; };
 		011625B6218FF14C00A3E388 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011625B5218FF14C00A3E388 /* ViewController.m */; };
@@ -39,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		0103B6AC249A210400F2771B /* CZQExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZQExtension.h; sourceTree = "<group>"; };
+		0105CA22249A594C005933B3 /* UILabel+CZQExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+CZQExtension.h"; sourceTree = "<group>"; };
+		0105CA23249A594C005933B3 /* UILabel+CZQExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CZQExtension.m"; sourceTree = "<group>"; };
 		011374922232449800C8D624 /* UIView+CZQExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CZQExtension.h"; sourceTree = "<group>"; };
 		011374932232449800C8D624 /* UIView+CZQExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CZQExtension.m"; sourceTree = "<group>"; };
 		011625AE218FF14C00A3E388 /* CZQExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CZQExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,13 +149,15 @@
 		011625E3218FF16B00A3E388 /* CZQExtension */ = {
 			isa = PBXGroup;
 			children = (
+				0103B6AC249A210400F2771B /* CZQExtension.h */,
 				011625E4218FF1DB00A3E388 /* NSDecimalNumber+CZQExtension.h */,
 				011625E5218FF1DB00A3E388 /* NSDecimalNumber+CZQExtension.m */,
 				011625E7218FF2AB00A3E388 /* NSString+CZQExtension.h */,
 				011625E8218FF2AB00A3E388 /* NSString+CZQExtension.m */,
+				0105CA22249A594C005933B3 /* UILabel+CZQExtension.h */,
+				0105CA23249A594C005933B3 /* UILabel+CZQExtension.m */,
 				011374922232449800C8D624 /* UIView+CZQExtension.h */,
 				011374932232449800C8D624 /* UIView+CZQExtension.m */,
-				0103B6AC249A210400F2771B /* CZQExtension.h */,
 			);
 			path = CZQExtension;
 			sourceTree = "<group>";
@@ -293,6 +298,7 @@
 				011625E9218FF2AB00A3E388 /* NSString+CZQExtension.m in Sources */,
 				011625B3218FF14C00A3E388 /* AppDelegate.m in Sources */,
 				011374942232449800C8D624 /* UIView+CZQExtension.m in Sources */,
+				0105CA24249A594C005933B3 /* UILabel+CZQExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
