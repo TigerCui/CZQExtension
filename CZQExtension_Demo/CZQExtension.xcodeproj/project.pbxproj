@@ -41,7 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0103B6AC249A210400F2771B /* CZQExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZQExtension.h; sourceTree = "<group>"; };
+		0103B6AC249A210400F2771B /* CZQExtensionHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZQExtensionHeader.h; sourceTree = "<group>"; };
 		0105CA22249A594C005933B3 /* UILabel+CZQExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+CZQExtension.h"; sourceTree = "<group>"; };
 		0105CA23249A594C005933B3 /* UILabel+CZQExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CZQExtension.m"; sourceTree = "<group>"; };
 		011374922232449800C8D624 /* UIView+CZQExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CZQExtension.h"; sourceTree = "<group>"; };
@@ -156,7 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				016D7D9C24A09E8E00387047 /* models */,
-				0103B6AC249A210400F2771B /* CZQExtension.h */,
+				0103B6AC249A210400F2771B /* CZQExtensionHeader.h */,
 				01399722249E44E2004D826F /* UITextField+CZQExtension.h */,
 				01399723249E44E2004D826F /* UITextField+CZQExtension.m */,
 				011625E4218FF1DB00A3E388 /* NSDecimalNumber+CZQExtension.h */,
