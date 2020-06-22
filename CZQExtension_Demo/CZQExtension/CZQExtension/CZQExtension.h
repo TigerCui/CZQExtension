@@ -13,5 +13,6 @@
 #import "NSString+CZQExtension.h"
 #import "UIView+CZQExtension.h"
 #import "UILabel+CZQExtension.h"
+#import "UITextField+CZQExtension.h"
 
 #endif /* CZQExtension_h */
