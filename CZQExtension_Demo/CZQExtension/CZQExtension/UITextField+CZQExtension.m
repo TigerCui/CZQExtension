@@ -9,12 +9,7 @@
 #import "UITextField+CZQExtension.h"
 #import "NSString+CZQExtension.h"
 #import "NSDecimalNumber+CZQExtension.h"
-
-@implementation CZQNumberLimit
-
-
-
-@end
+#import "CZQNumberLimit.h"
 
 @implementation UITextField (CZQExtension)
 

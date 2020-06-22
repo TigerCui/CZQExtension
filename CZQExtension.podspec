@@ -15,11 +15,21 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0" #平台及支持的最低版本
   s.source       = { :git => "https://github.com/TigerCui/CZQExtension.git", :tag => "#{s.version}" }
-  s.source_files  = "CZQExtension_Demo/CZQExtension/CZQExtension/*.{h,m}" #你代码的位置， CZQExtension/ *.{h,m} 表示 CZQExtension 文件夹下所有的.h和.m文件
   s.frameworks = "UIKit", "Foundation" #支持的框架
   s.requires_arc = true #是否使用arc
  
   s.author             = { "TIGERCUI" => "270310922@qq.com" }
   s.social_media_url   = "https://github.com/TigerCui"
+
+  s.source_files  = "CZQExtension_Demo/CZQExtension/CZQExtension/*.{h,m}" #你代码的位置， CZQExtension/ *.{h,m} 表示 CZQExtension 文件夹下所有的.h和.m文件
+  s.public_header_files = 'CZQExtension_Demo/CZQExtension/CZQExtension/CZQExtension.h' #头文件接口
+
+  #文件层级#
+  
+
+  s.subspec 'models' do |ss|
+    ss.source_files = 'CZQExtension_Demo/CZQExtension/CZQExtension/models/*.{h,m}'
+  end
+  
 
 end

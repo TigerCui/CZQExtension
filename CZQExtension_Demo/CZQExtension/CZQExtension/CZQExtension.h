@@ -15,4 +15,6 @@
 #import "UILabel+CZQExtension.h"
 #import "UITextField+CZQExtension.h"
 
+#import "CZQNumberLimit.h"
+
 #endif /* CZQExtension_h */
