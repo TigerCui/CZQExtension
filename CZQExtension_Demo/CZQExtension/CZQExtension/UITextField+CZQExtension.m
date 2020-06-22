@@ -27,7 +27,7 @@
  *  @param  textField       textField控件
  *  @param  range           字符位置
  *  @param  replace         当次输入的字符
- *  @param  length          输入支付最大长度,为空则不限制
+ *  @param  length          输入字符最大长度,为空则不限制
  *  @param  limitCharacters 要限制的字符,为空则不限制
  *  @param  numberLimit     数字限制条件 为空不做特殊限制
  */

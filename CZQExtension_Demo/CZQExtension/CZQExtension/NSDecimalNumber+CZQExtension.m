@@ -12,9 +12,9 @@
 @implementation NSDecimalNumber (CZQExtension)
 
 #pragma mark - 四则运算(+,-,*,/)
-+ (NSDecimalNumber *)czq_decimalNumber:(id)decimalNumber sumDecimalNumber:(id)otherDecimailNumber {
++ (NSDecimalNumber *)czq_decimalNumber:(id)decimalNumber sumDecimalNumber:(id)otherDecimalNumber {
     NSDecimalNumber *number = [NSDecimalNumber formatParam:decimalNumber];
-    NSDecimalNumber *otherNumber = [NSDecimalNumber formatParam:otherDecimailNumber];
+    NSDecimalNumber *otherNumber = [NSDecimalNumber formatParam:otherDecimalNumber];
     return [otherNumber decimalNumberByAdding:number];
 }
 

@@ -15,15 +15,15 @@
 /**
  *  计算decimalNumber + otherDecimailNumber
  *  @param  decimalNumber   参与计算的数字(NSString或NSNumber)
- *  @param  otherDecimailNumber 参与计算的数字(NSString或NSNumber)
+ *  @param  otherDecimalNumber 参与计算的数字(NSString或NSNumber)
  *  @return 计算结果,有错误时返回nil
  */
-+ (NSDecimalNumber *)czq_decimalNumber:(id)decimalNumber sumDecimalNumber:(id)otherDecimailNumber;
++ (NSDecimalNumber *)czq_decimalNumber:(id)decimalNumber sumDecimalNumber:(id)otherDecimalNumber;
 
 /**
  *  计算decimalNumber - otherDecimalNumber
  *  @param  decimalNumber   参与计算的数字(NSString或NSNumber)
- *  @param  otherDecimailNumber 参与计算的数字(NSString或NSNumber)
+ *  @param  otherDecimalNumber 参与计算的数字(NSString或NSNumber)
  *  @return 计算结果,有错误时返回nil
  */
 + (NSDecimalNumber *)czq_decimalNumber:(id)decimalNumber subtractDecimalNumber:(id)otherDecimalNumber;
@@ -31,7 +31,7 @@
 /**
  *  计算decimalNumber * otherDecimalNumber
  *  @param  decimalNumber   参与计算的数字(NSString或NSNumber)
- *  @param  otherDecimailNumber 参与计算的数字(NSString或NSNumber)
+ *  @param  otherDecimalNumber 参与计算的数字(NSString或NSNumber)
  *  @return 计算结果,有错误时返回nil
  */
 + (NSDecimalNumber *)czq_decimalNumber:(id)decimalNumber multiplyDecimalNumber:(id)otherDecimalNumber;
@@ -39,7 +39,7 @@
 /**
  *  计算decimalNumber / otherDecimalNumber
  *  @param  decimalNumber   参与计算的数字(NSString或NSNumber)
- *  @param  otherDecimailNumber 参与计算的数字(NSString或NSNumber)
+ *  @param  otherDecimalNumber 参与计算的数字(NSString或NSNumber)
  *  @return  计算结果,有错误时返回nil
  */
 + (NSDecimalNumber *)czq_decimalNumber:(id)decimalNumber divideDecimalNumber:(id)otherDecimalNumber;
@@ -48,7 +48,7 @@
 /**
  *  判断decimalNumber是否等于otherDecimalNumber
  *  @param  decimalNumber 参与计算的数字(NSString或NSNumber)
- *  @param  otherDecimailNumber 参与计算的数字(NSString或NSNumber)
+ *  @param  otherDecimalNumber 参与计算的数字(NSString或NSNumber)
  *  @return YES相等   NO不等
  */
 + (BOOL)czq_decimalNumber:(id)decimalNumber isEqualToDecimalNumber:(id)otherDecimalNumber;
@@ -56,7 +56,7 @@
 /**
  *  判断decimalNumber是否大于otherDecimalNumber
  *  @param  decimalNumber 参与计算的数字(NSString或NSNumber)
- *  @param  otherDecimailNumber 参与计算的数字(NSString或NSNumber)
+ *  @param  otherDecimalNumber 参与计算的数字(NSString或NSNumber)
  *  @return YES大于   NO不大于
  */
 + (BOOL)czq_decimalNumber:(id)decimalNumber isGreaterThanDecimalNumber:(id)otherDecimalNumber;
@@ -64,7 +64,7 @@
 /**
  *  判断decimalNumber是否小于otherDecimalNumber
  *  @param  decimalNumber 参与计算的数字(NSString或NSNumber)
- *  @param  otherDecimailNumber 参与计算的数字(NSString或NSNumber)
+ *  @param  otherDecimalNumber 参与计算的数字(NSString或NSNumber)
  *  @return YES小于   NO不小于
  */
 + (BOOL)czq_decimalNumber:(id)decimalNumber isLessThanDecimalNumber:(id)otherDecimalNumber;
@@ -72,7 +72,7 @@
 /**
  *  判断大小
  *  @param  decimalNumber 参与计算的数字(NSString或NSNumber)
- *  @param  otherDecimailNumber 参与计算的数字(NSString或NSNumber)
+ *  @param  otherDecimalNumber 参与计算的数字(NSString或NSNumber)
  *  @return NSOrderedSame           相等
  *          NSOrderedDescending     decimalNumber大于otherDecimalNumber
  *          NSOrderedAscending      decimalNumber小于otherDecimalNumber
