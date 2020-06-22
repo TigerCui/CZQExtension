@@ -34,9 +34,9 @@
 + (BOOL)czq_textField:(UITextField *)textField
                 range:(NSRange)range
     replacementString:(NSString *)replace
-               length:(NSString *)length
-      limitCharacters:(NSArray <NSString *> *)limitCharacters
-          numberLimit:(CZQNumberLimit *)numberLimit {
+               length:(NSString * _Nullable)length
+      limitCharacters:(NSArray <NSString *> * _Nullable)limitCharacters
+          numberLimit:(CZQNumberLimit * _Nullable)numberLimit {
     if (!replace.length) {
         return YES;
     }

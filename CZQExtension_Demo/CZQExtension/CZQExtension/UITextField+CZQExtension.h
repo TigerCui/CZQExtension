@@ -63,10 +63,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (BOOL)czq_textField:(UITextField *)textField
                 range:(NSRange)range
-    replacementString:(NSString *)replace
-               length:(NSString *)length
-      limitCharacters:(NSArray <NSString *> *)limitCharacters
-          numberLimit:(CZQNumberLimit *)numberLimit;
+    replacementString:(NSString  *)replace
+               length:(NSString  * _Nullable )length
+      limitCharacters:(NSArray <NSString *>  * _Nullable )limitCharacters
+          numberLimit:(CZQNumberLimit * _Nullable )numberLimit;
 
 @end
 
