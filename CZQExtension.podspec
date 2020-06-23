@@ -22,11 +22,9 @@ Pod::Spec.new do |s|
   s.social_media_url   = "https://github.com/TigerCui"
 
   s.source_files  = "CZQExtension_Demo/CZQExtension/CZQExtension/*.{h,m}" #你代码的位置， CZQExtension/ *.{h,m} 表示 CZQExtension 文件夹下所有的.h和.m文件
-  s.public_header_files = 'CZQExtension_Demo/CZQExtension/CZQExtension/CZQExtensionHeader.h' #头文件接口
+#  s.public_header_files = 'CZQExtension_Demo/CZQExtension/CZQExtension/CZQExtensionHeader.h' #头文件接口
 
   #文件层级#
-
-
   s.subspec 'models' do |ss|
     ss.source_files = 'CZQExtension_Demo/CZQExtension/CZQExtension/models/*.{h,m}'
   end
