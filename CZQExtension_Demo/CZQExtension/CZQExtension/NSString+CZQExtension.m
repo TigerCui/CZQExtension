@@ -27,59 +27,10 @@
     if (!trimmedStr.length) {
         return YES;
     }
-    if ([string isEqualToString:@"null"] || [string isEqualToString:@"NULL"] || [NSString stringWithFormat:@"(NULL)"]) {
+    if ([string isEqualToString:@"null"] || [string isEqualToString:@"NULL"] || [string isEqualToString:@"(NULL)"]) {
         return YES;
     }
     return NO;
-}
-
-#pragma mark - 判断数字
-/**
- *  判断字符串是否为int
- *  @return YES是int NO不是int
- */
-- (BOOL)czq_isPureInt {
-    NSScanner* scan = [NSScanner scannerWithString:self];
-    int val;
-    return[scan scanInt:&val] && [scan isAtEnd];
-}
-
-/**
- *  判断字符串是否是浮点数字
- *  @return YES是float   NO不是float
- */
-- (BOOL)czq_isPureFloat {
-    NSScanner* scan = [NSScanner scannerWithString:self];
-    float val;
-    return[scan scanFloat:&val] && [scan isAtEnd];
-}
-
-/**
- *  判断字符串是否是double
- *  @return YES是double  NO不是double
- */
-- (BOOL)czq_isPureDouble {
-    NSScanner* scan = [NSScanner scannerWithString:self];
-    double val;
-    return[scan scanDouble:&val] && [scan isAtEnd];
-}
-
-/**
- *  判断字符串是否是integer
- *  @return YES是integer NO不是integer
- */
-- (BOOL)czq_isPureInteger {
-    NSScanner* scan = [NSScanner scannerWithString:self];
-    NSInteger val;
-    return[scan scanInteger:&val] && [scan isAtEnd];
-}
-
-/**
- *  判断字符串是否是数字
- *  @return YES是数字  NO不是数字
- */
-- (BOOL)czq_isPureNumber {
-    return [self czq_isPureInt] || [self czq_isPureFloat] || [self czq_isPureDouble] || [self czq_isPureInteger];
 }
 
 #pragma mark - 数字处理
@@ -111,6 +62,20 @@
     NSDecimalNumber *d = [NSDecimalNumber czq_decimalNumber:self roundUpWithScale:scale];
     return [NSString stringWithFormat:@"%@",d];
 }
+
+/**
+ *  裁减掉多余的0
+ *  @return 裁剪后的数字字符串
+ *  1.0->1  1.10->1.1
+ */
+//- (NSString *)czq_trimMoreZero {
+//    if ([self czq_isPureNumber]) {
+//        NSDecimalNumber *decimalNum = [NSDecimalNumber decimalNumberWithString:self];
+//        return [NSString stringWithFormat:@"%@",decimalNum];
+//    } else {
+//        return nil;
+//    }
+//}
 
 #pragma mark - 日期转换
 /**

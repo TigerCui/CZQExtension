@@ -8,6 +8,7 @@
 
 #import "UITextField+CZQExtension.h"
 #import "NSString+CZQExtension.h"
+#import "NSNumber+CZQExtension.h"
 #import "NSDecimalNumber+CZQExtension.h"
 #import "CZQNumberLimit.h"
 
@@ -110,7 +111,7 @@
             numberStr = [numberStr stringByReplacingOccurrencesOfString:@"." withString:@""];
         }
         if (numberStr.length) {
-            if (![numberStr czq_isPureInt]) {
+            if (![NSNumber czq_isStringPureInt:numberStr]) {
                 return NO;
             }
         }

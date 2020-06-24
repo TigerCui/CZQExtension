@@ -8,6 +8,7 @@
 
 #import "NSDecimalNumber+CZQExtension.h"
 #import "NSString+CZQExtension.h"
+#import "YYCategories.h"
 
 @implementation NSDecimalNumber (CZQExtension)
 
@@ -136,7 +137,7 @@
         if ([NSString czq_isBlankString:param]) {
             number = @"0";
         } else {
-            if (![param czq_isPureNumber]) {
+            if (![NSNumber numberWithString:param]) {
                 NSCAssert(YES, ([NSString stringWithFormat:@"%@不是数字",param]));
             }
         }
@@ -151,7 +152,7 @@
     } else {
         number = @"0";
     }
-    number = [NSString stringWithFormat:@"%@",param];
+    number = number?:[NSString stringWithFormat:@"%@",param];
     return [NSDecimalNumber decimalNumberWithString:number];
 }
 

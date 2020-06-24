@@ -26,37 +26,6 @@ typedef NS_ENUM(NSInteger,CZQOnlinePaymentType) {
  */
 + (BOOL)czq_isBlankString:(id)string;
 
-#pragma mark - 判断数字
-/**
- *  判断字符串是否为int
- *  @return YES是int NO不是int
- */
-- (BOOL)czq_isPureInt;
-
-/**
- *  判断字符串是否是浮点数字
- *  @return YES是float   NO不是float
- */
-- (BOOL)czq_isPureFloat;
-
-/**
- *  判断字符串是否是double
- *  @return YES是double  NO不是double
- */
-- (BOOL)czq_isPureDouble;
-
-/**
- *  判断字符串是否是integer
- *  @return YES是integer NO不是integer
- */
-- (BOOL)czq_isPureInteger;
-
-/**
- *  判断字符串是否是数字
- *  @return YES是数字  NO不是数字
- */
-- (BOOL)czq_isPureNumber;
-
 #pragma mark - 数字处理
 /**
  *  小数最后一位四舍五入

@@ -21,6 +21,8 @@
 		012DE85124A1950E00094017 /* NSDecimalNumber+CZQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 012DE85024A1950E00094017 /* NSDecimalNumber+CZQExtension.m */; };
 		01399724249E44E2004D826F /* UITextField+CZQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 01399723249E44E2004D826F /* UITextField+CZQExtension.m */; };
 		016D7D9F24A09EA400387047 /* CZQNumberLimit.m in Sources */ = {isa = PBXBuildFile; fileRef = 016D7D9E24A09EA400387047 /* CZQNumberLimit.m */; };
+		016F7C8B24A3948C0006DD3A /* NSNumber+CZQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 016F7C8A24A3948C0006DD3A /* NSNumber+CZQExtension.m */; };
+		4FA86017EA1AFB1F6E7F0EAB /* libPods-CZQExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F6EFD84B3DA4D625614E5A6 /* libPods-CZQExtension.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,11 @@
 		01399723249E44E2004D826F /* UITextField+CZQExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+CZQExtension.m"; sourceTree = "<group>"; };
 		016D7D9D24A09EA400387047 /* CZQNumberLimit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZQNumberLimit.h; sourceTree = "<group>"; };
 		016D7D9E24A09EA400387047 /* CZQNumberLimit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CZQNumberLimit.m; sourceTree = "<group>"; };
+		016F7C8924A3948C0006DD3A /* NSNumber+CZQExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNumber+CZQExtension.h"; sourceTree = "<group>"; };
+		016F7C8A24A3948C0006DD3A /* NSNumber+CZQExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+CZQExtension.m"; sourceTree = "<group>"; };
+		4F6EFD84B3DA4D625614E5A6 /* libPods-CZQExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CZQExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B05D72A0C5C8F629F0AE71BA /* Pods-CZQExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CZQExtension.release.xcconfig"; path = "Target Support Files/Pods-CZQExtension/Pods-CZQExtension.release.xcconfig"; sourceTree = "<group>"; };
+		BCC4F528EF9F91DE4DBC6BC7 /* Pods-CZQExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CZQExtension.debug.xcconfig"; path = "Target Support Files/Pods-CZQExtension/Pods-CZQExtension.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FA86017EA1AFB1F6E7F0EAB /* libPods-CZQExtension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +112,8 @@
 				011625C9218FF15000A3E388 /* CZQExtensionTests */,
 				011625D4218FF15000A3E388 /* CZQExtensionUITests */,
 				011625AF218FF14C00A3E388 /* Products */,
+				476123AC84E93898862F2907 /* Pods */,
+				DB76B6C23F2450D05650BB10 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,6 +177,8 @@
 				011374922232449800C8D624 /* UIView+CZQExtension.h */,
 				011374932232449800C8D624 /* UIView+CZQExtension.m */,
 				012DE84E24A1929300094017 /* CZQExtensionHeader.h */,
+				016F7C8924A3948C0006DD3A /* NSNumber+CZQExtension.h */,
+				016F7C8A24A3948C0006DD3A /* NSNumber+CZQExtension.m */,
 			);
 			path = CZQExtension;
 			sourceTree = "<group>";
@@ -180,6 +192,24 @@
 			path = models;
 			sourceTree = "<group>";
 		};
+		476123AC84E93898862F2907 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCC4F528EF9F91DE4DBC6BC7 /* Pods-CZQExtension.debug.xcconfig */,
+				B05D72A0C5C8F629F0AE71BA /* Pods-CZQExtension.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DB76B6C23F2450D05650BB10 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F6EFD84B3DA4D625614E5A6 /* libPods-CZQExtension.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -187,6 +217,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 011625DA218FF15000A3E388 /* Build configuration list for PBXNativeTarget "CZQExtension" */;
 			buildPhases = (
+				E08D27A56AB5EAE4E345229E /* [CP] Check Pods Manifest.lock */,
 				011625AA218FF14C00A3E388 /* Sources */,
 				011625AB218FF14C00A3E388 /* Frameworks */,
 				011625AC218FF14C00A3E388 /* Resources */,
@@ -305,11 +336,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E08D27A56AB5EAE4E345229E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CZQExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		011625AA218FF14C00A3E388 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				016F7C8B24A3948C0006DD3A /* NSNumber+CZQExtension.m in Sources */,
 				011625B6218FF14C00A3E388 /* ViewController.m in Sources */,
 				01399724249E44E2004D826F /* UITextField+CZQExtension.m in Sources */,
 				011625C1218FF14F00A3E388 /* main.m in Sources */,
@@ -487,6 +544,7 @@
 		};
 		011625DB218FF15000A3E388 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCC4F528EF9F91DE4DBC6BC7 /* Pods-CZQExtension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -504,6 +562,7 @@
 		};
 		011625DC218FF15000A3E388 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B05D72A0C5C8F629F0AE71BA /* Pods-CZQExtension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
