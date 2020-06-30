@@ -23,24 +23,16 @@
  *  @param  textField       textField控件
  *  @param  range           字符位置
  *  @param  replace         当次输入的字符
- *  @param  length          输入字符最大长度,为空则不限制
  *  @param  limitCharacters 要限制的字符,为空则不限制
  *  @param  numberLimit     数字限制条件 为空不做特殊限制
  */
 + (BOOL)czq_textField:(UITextField *)textField
                 range:(NSRange)range
     replacementString:(NSString *)replace
-               length:(NSString * _Nullable)length
       limitCharacters:(NSArray <NSString *> * _Nullable)limitCharacters
           numberLimit:(CZQNumberLimit * _Nullable)numberLimit {
     if (!replace.length) {
         return YES;
-    }
-    if (length) {
-        if (textField.text.length >= length.intValue) {
-            //限制总长度
-            return NO;
-        }
     }
     if (limitCharacters.count) {
         if ([limitCharacters containsObject:replace]) {
@@ -48,7 +40,6 @@
             return NO;
         }
     }
-    
     if (numberLimit) {
         //限制数字
         if (numberLimit.isSupportNegative.integerValue) {
