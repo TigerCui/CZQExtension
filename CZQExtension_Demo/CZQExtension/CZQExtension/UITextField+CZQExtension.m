@@ -160,9 +160,33 @@
                 }
             }
         }
-        
     }
     return YES;
+}
+
+
+/**
+ *  限制字符串最长长度
+ *  在- (void)textFieldDidChange:(UITextField *)textField中调用
+ *  将超出限制的字符串截取到符合限制
+ *  @param  length  要限制的长度
+ *  @return 超出长度是返回error,否则返回nil
+ */
+- (NSError *)czq_limitLength:(NSUInteger)length {
+    UITextRange *selectedRange = [self markedTextRange];
+    NSString *selectedText = [self textInRange:selectedRange];
+    NSInteger count = self.text.length;
+    if (selectedText.length) {
+        count = self.text.length - selectedText.length;
+    }
+    if (count > length) {
+        /*处理超出部分字的情况*/
+        NSString * text = [self.text substringWithRange:NSMakeRange(0, length)];
+        self.text = text;
+        return [NSError errorWithDomain:@"字数已超" code:1000 userInfo:nil];
+    } else {
+        return nil;
+    }
 }
 
 @end

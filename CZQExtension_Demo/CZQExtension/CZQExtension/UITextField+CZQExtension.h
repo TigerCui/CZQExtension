@@ -32,6 +32,15 @@ NS_ASSUME_NONNULL_BEGIN
       limitCharacters:(NSArray <NSString *>  * _Nullable )limitCharacters
           numberLimit:(CZQNumberLimit * _Nullable )numberLimit;
 
+/**
+ *  限制字符串最长长度
+ *  在UIControlEventEditingChanged事件中调用
+ *  将超出限制的字符串截取到符合限制
+ *  @param  length  要限制的长度
+ *  @return 超出长度是返回error,否则返回nil
+ */
+- (NSError *)czq_limitLength:(NSUInteger)length;
+
 @end
 
 NS_ASSUME_NONNULL_END
